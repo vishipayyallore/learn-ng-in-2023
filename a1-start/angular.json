@@ -68,7 +68,8 @@
               "browserTarget": "a1-start:build:production"
             },
             "development": {
-              "browserTarget": "a1-start:build:development"
+              "browserTarget": "a1-start:build:development",
+              "port": 4201
             }
           },
           "defaultConfiguration": "development"
@@ -100,5 +101,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
