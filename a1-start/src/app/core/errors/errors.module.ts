@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { ErrorsRoutingModule } from './errors-routing.module';
+import { NotFoundComponent } from './not-found/not-found.component';
 
-// import { HomeComponent } from './home.component';
-// import { HomeRoutingModule } from './home-routing.module';
-
-// const components = [
-//   HomeComponent
-// ];
+const components = [
+  NotFoundComponent
+];
 
 @NgModule({
-  // declarations: components,
-  // exports: components,
+  declarations: components,
+  exports: components,
   imports: [
     CommonModule,
     ErrorsRoutingModule
