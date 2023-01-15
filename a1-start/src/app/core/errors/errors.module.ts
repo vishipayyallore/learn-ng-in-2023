@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 import { ErrorsRoutingModule } from './errors-routing.module';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { NgmaterialModule } from '~/app/ngmaterial/ngmaterial.module';
 
 const components = [
   NotFoundComponent
@@ -13,7 +14,9 @@ const components = [
   exports: components,
   imports: [
     CommonModule,
-    ErrorsRoutingModule
+    ErrorsRoutingModule,
+    NgmaterialModule,
+    NgOptimizedImage,
   ]
 })
 export class ErrorsModule { }
