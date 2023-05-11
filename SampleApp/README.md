@@ -13,7 +13,7 @@ npm list
 
 ng new AppName --skip-install
 
-npx http-server dist/sample-app -port 8080
+npx http-server ./dist/sample-app -p 8000 -c-1 -a 127.0.0.1
 ```
 
 ## Build Process
