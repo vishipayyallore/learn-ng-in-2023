@@ -12,6 +12,8 @@ Major.Minor.Patch
 npm list
 
 ng new AppName --skip-install
+
+npx http-server dist/sampleapp -port 8080
 ```
 
 ## Build Process
