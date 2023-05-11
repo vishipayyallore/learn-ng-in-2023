@@ -14,6 +14,12 @@ npm list
 ng new AppName --skip-install
 ```
 
+## Build Process
+
+TypeScript compiler will compile the .ts files into JavaScripts.
+Ng Compiler it will also transform the templates into JavaScripts Statements. It will also transform the CSS into JavaScripts Statements. It will also transform the HTML into JavaScripts Statements.
+WebPack (Build Process) is a module bundler. It will bundle all the JavaScripts files into one file. It will also bundle all the CSS files into one file. It will also bundle all the HTML files into one file. It will also bundle all the images into one file. It will also bundle all the fonts.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
