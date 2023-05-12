@@ -12,7 +12,25 @@ Major.Minor.Patch
 npm list
 
 ng new AppName --skip-install
+
+npx http-server ./dist/sample-app -p 8000 -c-1 -a 127.0.0.1
 ```
+
+## Build Process
+
+> 1. TypeScript compiler will compile the .ts files into JavaScripts.
+> 1. Angular Compiler (called as `ngc`) it will also transform the templates into JavaScripts Statements. It will also transform the CSS into JavaScripts Statements. It will also transform the HTML into JavaScripts Statements.
+> 1. WebPack (Build Process) is a module bundler. It will bundle all the JavaScripts files into one file. It will also bundle all the CSS files into one file. It will also bundle all the HTML files into one file. It will also bundle all the images into one file. It will also bundle all the fonts.
+
+### ngc (Angular Compiler)
+
+> 1. Compile Angular decorators, including components and their templates.
+> 1. Apply TypeScript’s type-checking rules to component templates.
+> 1. Re-compile quickly when the developer makes a change.
+
+**Reference(s):**
+
+> 1. [https://blog.angular.io/how-the-angular-compiler-works-42111f9d2549](https://blog.angular.io/how-the-angular-compiler-works-42111f9d2549)
 
 ## Development server
 
