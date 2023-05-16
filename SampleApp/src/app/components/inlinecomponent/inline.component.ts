@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-inline',
     template: `
-    <div>
+    <div class=roundercornerswithborder>
         <h1>{{Message}}</h1>
         <h3>{{Message}}</h3>
     </div>
