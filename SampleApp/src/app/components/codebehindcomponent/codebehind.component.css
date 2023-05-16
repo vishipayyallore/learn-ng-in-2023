@@ -1,12 +1,10 @@
 h1
 {
     font-weight:bold;
-    font-style:italic;
-    text-decoration:underline;
-    color:blue
+    color:rgb(2, 78, 158)
 }
 
 h3
 {
-    color:red
+    color:rgb(195, 79, 2)
 }

@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 
 })
 export class CodeBehindComponent {
-    Message: string = "This is Code behind Angular 15 Component.";
+    Message: string = "This is Code behind Component.";
 }
