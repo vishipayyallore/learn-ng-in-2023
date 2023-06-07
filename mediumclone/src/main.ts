@@ -3,7 +3,8 @@ import { provideRouter } from '@angular/router';
 
 import { AppComponent } from './app/app.component';
 import { appRoutes } from './app/app.routes';
+import { provideStore } from '@ngrx/store';
 
 bootstrapApplication(AppComponent, {
-    providers: [provideRouter(appRoutes)],
+    providers: [provideRouter(appRoutes), provideStore()],
 });
