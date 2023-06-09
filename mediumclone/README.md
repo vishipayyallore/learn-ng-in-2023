@@ -7,6 +7,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 > 1. [https://github.com/gothinkster/realworld](https://github.com/gothinkster/realworld)
 > 1. [https://realworld-docs.netlify.app/docs/specs/backend-specs/introduction/](https://realworld-docs.netlify.app/docs/specs/backend-specs/introduction/)
 
+## Few Packages
+
+```bash
+ng add @ngrx/store-devtools
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
