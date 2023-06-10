@@ -11,6 +11,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ```bash
 ng add @ngrx/store-devtools
+
+npm install jest jest-environment-jsdom @types/jest --save-dev
 ```
 
 ## Development server
