@@ -4,6 +4,8 @@ import { RegisterRequestInterface } from '../../types/registerRequest.interface'
 import { Store } from '@ngrx/store';
 import { register } from '../../store/actions';
 import { RouterLink } from '@angular/router';
+import { selectIsSubmitting } from '@auth/store/selectors';
+import { AuthStateInterface } from '@auth/types/authState.interface';
 
 @Component({
     selector: 'mc-register',
@@ -18,7 +20,9 @@ export class RegisterComponent {
         password: ['', Validators.required],
     });
 
-    constructor(private fb: FormBuilder, private store: Store) {}
+    isSubmitting$ = this.store.select(selectIsSubmitting);
+
+    constructor(private fb: FormBuilder, private store: Store<{ auth: AuthStateInterface }>) {}
 
     onSubmit() {
         console.log('form', this.form.getRawValue());
