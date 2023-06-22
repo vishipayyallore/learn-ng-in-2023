@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
-import { selectIsSubmitting } from '@auth/store/selectors';
+import { selectIsSubmitting } from '@auth/store/reducers';
 import { AuthStateInterface } from '@auth/types/authState.interface';
 import { Store } from '@ngrx/store';
 import { register } from '../../store/actions';
