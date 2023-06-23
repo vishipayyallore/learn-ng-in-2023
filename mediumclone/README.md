@@ -13,6 +13,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ng add @ngrx/store-devtools
 
 npm install jest jest-environment-jsdom @types/jest --save-dev
+
+npx -p @angular/cli ng g environments --defaults --dry-run
 ```
 
 ## Development server
