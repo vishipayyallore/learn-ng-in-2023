@@ -7,6 +7,7 @@ import { AuthStateInterface } from '@auth/types/authState.interface';
 import { Store } from '@ngrx/store';
 import { register } from '../../store/actions';
 import { RegisterRequestInterface } from '../../types/registerRequest.interface';
+import { AuthService } from '@auth/services/auth.service';
 
 @Component({
     selector: 'mc-register',
@@ -23,7 +24,7 @@ export class RegisterComponent {
 
     isSubmitting$ = this.store.select(selectIsSubmitting);
 
-    constructor(private fb: FormBuilder, private store: Store<{ auth: AuthStateInterface }>) {}
+    constructor(private fb: FormBuilder, private store: Store<{ auth: AuthStateInterface }>, private authService: AuthService) {}
 
     onSubmit() {
         console.log('form', this.form.getRawValue());
@@ -31,5 +32,9 @@ export class RegisterComponent {
             user: this.form.getRawValue(),
         };
         this.store.dispatch(register({ request }));
+
+        this.authService.register(request).subscribe((response) => {
+            console.log('response', response);
+        });
     }
 }

@@ -7,9 +7,11 @@ import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { AppComponent } from './app/app.component';
 import { appRoutes } from './app/app.routes';
 import { authFeatureKey, authReducer } from './app/auth/store/reducers';
+import { provideHttpClient } from '@angular/common/http';
 
 bootstrapApplication(AppComponent, {
     providers: [
+        provideHttpClient(),
         provideRouter(appRoutes),
         provideStore(),
         provideState(authFeatureKey, authReducer),
