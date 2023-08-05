@@ -8,3 +8,4 @@ homeFolder: C:\GitHub\learn-ng-in-2023\blog-app
 distFolder: dist/blog-app
 outDir: C:\GitHub\learn-ng-in-2023\blog-app\dist\static
 handle404: ''
+allowErrorCollect: false
