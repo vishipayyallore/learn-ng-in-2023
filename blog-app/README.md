@@ -32,6 +32,8 @@ ng build
 npx scully --project blog-app # Routes Generation
 
 npx scully serve --project blog-app
+
+ng generate @scullyio/init:post --name="Angular and Scully"
 ```
 
 ## Development server
