@@ -26,6 +26,12 @@ ng generate module articles --route=articles --module=app-routing
 npm install @scullyio/init @scullyio/ng-lib @scullyio/scully @scullyio/scully-plugin-puppeteer --force
 
 ng generate @scullyio/init:markdown --project blog-app
+
+ng build
+
+npx scully --project blog-app
+
+npx scully serve --project blog-app
 ```
 
 ## Development server
