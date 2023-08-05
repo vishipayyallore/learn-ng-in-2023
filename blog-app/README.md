@@ -36,6 +36,8 @@ npx scully serve --project blog-app
 ng generate @scullyio/init:post --name="Angular and Scully"
 ```
 
+![Executing the Project](./src/assets/ProjectExecution.PNG)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
