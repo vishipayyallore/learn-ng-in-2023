@@ -1,0 +1,11 @@
+identifier: lek5y2c533nbv09f
+appPort: 1864
+staticPort: 1668
+reloadPort: 2667
+hostName: localhost
+projectName: blog-app
+homeFolder: C:\GitHub\learn-ng-in-2023\blog-app
+distFolder: dist/blog-app
+outDir: C:\GitHub\learn-ng-in-2023\blog-app\dist\static
+handle404: ''
+allowErrorCollect: false
