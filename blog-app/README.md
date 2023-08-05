@@ -29,7 +29,7 @@ ng generate @scullyio/init:markdown --project blog-app
 
 ng build
 
-npx scully --project blog-app
+npx scully --project blog-app # Routes Generation
 
 npx scully serve --project blog-app
 ```
