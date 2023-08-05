@@ -20,6 +20,8 @@ ng generate component footer --path=src/app/shared --module=shared --export
 ng generate module contact
 
 ng generate component contact --path=src/app/contact --module=contact --export --flat
+
+ng generate module articles --route=articles --module=app-routing
 ```
 
 ## Development server
