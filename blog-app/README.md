@@ -22,6 +22,8 @@ ng generate module contact
 ng generate component contact --path=src/app/contact --module=contact --export --flat
 
 ng generate module articles --route=articles --module=app-routing
+
+npm install @scullyio/init @scullyio/ng-lib @scullyio/scully @scullyio/scully-plugin-puppeteer --force
 ```
 
 ## Development server
