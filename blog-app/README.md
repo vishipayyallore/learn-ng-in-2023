@@ -2,6 +2,18 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
 
+## Commands
+
+```bash
+ng new blog-app --routing --style=scss --prefix=sv --dry-run
+
+npm install bootstrap
+
+ng generate module core
+
+ng generate component header --path=src/app/core --module=core --export
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
