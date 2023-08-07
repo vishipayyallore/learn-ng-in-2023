@@ -9,6 +9,7 @@ ng new shop-app --routing --style=scss --prefix=sv --dry-run
 
 ng generate module products
 
+ng generate component products/product-list --dry-run
 ```
 
 ## Development server
