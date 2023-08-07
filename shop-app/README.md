@@ -6,6 +6,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ```bash
 ng new shop-app --routing --style=scss --prefix=sv --dry-run
+
+ng generate module products
+
 ```
 
 ## Development server
