@@ -5,4 +5,4 @@
     <li (click)="selectedProduct = 'Wireless Keyboard'">Wireless Keyboard</li>
 </ul>
 
-<sv-product-detail [name]="selectedProduct"></sv-product-detail>
+<sv-product-detail [name]="selectedProduct" (bought)="onBuy()"></sv-product-detail>
