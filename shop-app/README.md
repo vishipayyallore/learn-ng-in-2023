@@ -10,6 +10,40 @@ ng new shop-app --routing --style=scss --prefix=sv --dry-run
 ng generate module products
 
 ng generate component products/product-list --dry-run
+
+ng generate component products/product-detail --dry-run
+
+ng generate component products/product --standalone --dry-run
+```
+
+```html
+<!-- property binding -  -->
+<!-- <span [innerText]="title"></span>  -->
+
+<!-- <p class="star"></p>
+<p style="color: greenyellow"></p> -->
+
+<!-- class binding -  -->
+<!-- <p [class.star]="isLiked"></p>
+
+<p [class]="currentClasses"></p>
+
+currentClasses = {
+  star: true,
+  active: false
+}; -->
+
+<!-- style binding -  -->
+<!-- <p [style.width.px]="100"></p>
+<p [style]="currentStyles"></p> -->
+
+<!-- currentStyles = {
+  color: 'greenyellow',
+  width: '100px'
+}; -->
+
+<!-- event binding -  -->
+<!-- <button (click)="onClick()">Click me</button>  -->
 ```
 
 ## Development server
