@@ -1,6 +1,7 @@
 import {
     Component,
     Input,
+    OnInit,
     Output,
     EventEmitter,
     ViewEncapsulation,
@@ -18,6 +19,10 @@ export class ProductDetailComponent {
     @Input() name = '';
 
     @Output() bought = new EventEmitter<string>();
+
+    constructor() {
+        console.log(`Name is ${this.name} in the constructor`);
+    }
 
     buy() {
         this.bought.emit(this.name);
