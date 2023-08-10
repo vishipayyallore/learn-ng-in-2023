@@ -6,7 +6,8 @@ import { Component } from '@angular/core';
     styleUrls: ['./product-list.component.scss'],
 })
 export class ProductListComponent {
-    selectedProduct = '';
+    // selectedProduct = '';
+    selectedProduct = 'Microphone';
 
     onBuy(name: string) {
         window.alert(`You just bought ${name}!`);

@@ -21,7 +21,13 @@ export class ProductDetailComponent {
     @Output() bought = new EventEmitter<string>();
 
     constructor() {
-        console.log(`Name is ${this.name} in the constructor`);
+        console.log(
+            `Name is ${this.name} in the ProductDetailComponent::constructor`
+        );
+    }
+
+    ngOnInit(): void {
+        console.log(`Name is ${this.name} in the ProductDetailComponent::ngOnInit`);
     }
 
     buy() {
@@ -29,7 +35,7 @@ export class ProductDetailComponent {
     }
 
     get productName(): string {
-        console.log(`Get ${this.name}`);
+        console.log(`Get::productName() ${this.name}`);
         return this.name;
     }
 }
