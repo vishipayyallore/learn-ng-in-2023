@@ -15,7 +15,7 @@ import {
     encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ProductDetailComponent {
+export class ProductDetailComponent implements OnInit {
     @Input() name = '';
 
     @Output() bought = new EventEmitter<string>();
@@ -27,7 +27,9 @@ export class ProductDetailComponent {
     }
 
     ngOnInit(): void {
-        console.log(`Name is ${this.name} in the ProductDetailComponent::ngOnInit`);
+        console.log(
+            `Name is ${this.name} in the ProductDetailComponent::ngOnInit`
+        );
     }
 
     buy() {
