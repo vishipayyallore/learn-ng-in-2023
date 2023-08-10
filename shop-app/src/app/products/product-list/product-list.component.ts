@@ -8,8 +8,8 @@ import { ProductDetailComponent } from '../product-detail/product-detail.compone
     styleUrls: ['./product-list.component.scss'],
 })
 export class ProductListComponent implements AfterViewInit {
-    // selectedProduct = '';
-    selectedProduct = 'Microphone';
+    selectedProduct = '';
+    // selectedProduct = 'Microphone';
 
     @ViewChild(ProductDetailComponent) productDetail:
         | ProductDetailComponent
