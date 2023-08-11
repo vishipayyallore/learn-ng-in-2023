@@ -5,4 +5,12 @@
     <li (click)="selectedProduct = 'Wireless Keyboard'">Wireless Keyboard</li>
 </ul>
 
-<sv-product-detail [name]="selectedProduct" (bought)="onBuy($event)"></sv-product-detail>
+<sv-product-detail
+    *ngIf="selectedProduct; else noProduct"
+    [name]="selectedProduct"
+    (bought)="onBuy($event)"
+></sv-product-detail>
+
+<ng-template #noProduct>
+    <p>No product selected!</p>
+</ng-template>
