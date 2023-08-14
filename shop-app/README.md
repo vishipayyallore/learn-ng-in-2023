@@ -14,6 +14,8 @@ ng generate component products/product-list --dry-run
 ng generate component products/product-detail --dry-run
 
 ng generate component products/product --standalone --dry-run
+
+ng generate interface products/product --dry-run
 ```
 
 ```html
