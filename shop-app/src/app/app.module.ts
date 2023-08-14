@@ -5,9 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsModule } from './products/products.module';
 import { FilterPipe } from './products/filter.pipe';
+import { CopyrightDirective } from './copyright.directive';
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [AppComponent, CopyrightDirective],
     imports: [BrowserModule, FilterPipe, AppRoutingModule, ProductsModule],
     providers: [],
     bootstrap: [AppComponent],
