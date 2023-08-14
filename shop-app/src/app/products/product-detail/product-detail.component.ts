@@ -10,6 +10,8 @@ import {
     ChangeDetectionStrategy,
 } from '@angular/core';
 
+import { ProductInterface } from '../product-interface';
+
 @Component({
     selector: 'sv-product-detail',
     templateUrl: './product-detail.component.html',
@@ -18,38 +20,37 @@ import {
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductDetailComponent implements OnInit, OnChanges {
-    @Input() name = '';
+    @Input() product: ProductInterface | undefined;
 
     @Output() bought = new EventEmitter<string>();
 
     constructor() {
         console.log(
-            `Name is ${this.name} in the ProductDetailComponent::constructor`
+            `Name is ${this.product?.name} in the ProductDetailComponent::constructor`
         );
     }
 
     ngOnInit(): void {
         console.log(
-            `Name is ${this.name} in the ProductDetailComponent::ngOnInit`
+            `Name is ${this.product?.name} in the ProductDetailComponent::ngOnInit`
         );
     }
 
     ngOnChanges(changes: SimpleChanges): void {
-        const product = changes['name'];
-
+        const product = changes['product'];
         if (!product.isFirstChange()) {
-            const oldValue = product.previousValue;
-            const newValue = product.currentValue;
-            console.log(`Product changed from ${oldValue} to ${newValue}`);
+            const oldValue = product.previousValue.name;
+            const newValue = product.currentValue.name;
+            console.log(`Product changed from ${oldValue} to ${newValue}`);
         }
     }
 
     buy() {
-        this.bought.emit(this.name);
+        this.bought.emit(this.product?.name);
     }
 
     get productName(): string {
-        console.log(`Get::productName() ${this.name}`);
-        return this.name;
+        console.log(`Get::productName() ${this.product?.name}`);
+        return this.product?.name || '';
     }
 }
