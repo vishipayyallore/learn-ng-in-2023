@@ -10,6 +10,7 @@ import { ProductDetailComponent } from '../product-detail/product-detail.compone
 export class ProductListComponent implements AfterViewInit {
     selectedProduct = '';
     // selectedProduct = 'Microphone';
+    products = ['Webcam', 'Microphone', 'Wireless keyboard'];
 
     @ViewChild(ProductDetailComponent) productDetail:
         | ProductDetailComponent
