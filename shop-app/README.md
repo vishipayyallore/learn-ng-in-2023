@@ -20,6 +20,8 @@ ng generate interface products/product-interface --dry-run
 ng generate pipe products/sort --dry-run
 
 ng generate pipe products/filter --standalone --dry-run
+
+ng generate directive copyright --dry-run
 ```
 
 ```html
