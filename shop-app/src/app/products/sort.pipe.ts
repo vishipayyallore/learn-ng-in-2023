@@ -4,6 +4,7 @@ import { ProductInterface } from './product-interface';
 
 @Pipe({
     name: 'sort',
+    pure: false
 })
 export class SortPipe implements PipeTransform {
     transform(value: ProductInterface[]): ProductInterface[] {
