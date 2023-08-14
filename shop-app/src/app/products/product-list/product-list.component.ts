@@ -35,8 +35,9 @@ export class ProductListComponent implements AfterViewInit {
             console.log(this.productDetail.product);
         }
     }
+
     onBuy() {
-        window.alert('You just bought ${this.selectedProduct?.name}!');
+        window.alert(`You just bought ${this.selectedProduct?.name}!`);
     }
 
     trackByProducts(index: number, name: string): string {
