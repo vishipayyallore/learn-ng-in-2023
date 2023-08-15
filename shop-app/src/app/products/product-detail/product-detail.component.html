@@ -1,6 +1,42 @@
-<div *ngIf="name">
+<div *ngIf="product">
     <h2>Product Details</h2>
-    <h3>{{ name }}</h3>
-    <!-- <span>{{productName}}</span> -->
+    <h3>{{ product.name }}</h3>
+    <span>{{product.price | currency:'EUR'}}</span>
+    <div [ngSwitch]="product.name">
+        <p *ngSwitchCase="'Webcam'">Product is used for video</p>
+        <p *ngSwitchCase="'Microphone'">Product is used for audio</p>
+        <p *ngSwitchDefault>Product is for general use</p>
+    </div>
     <button (click)="buy()">Buy Now</button>
 </div>
+
+<!-- <div *ngIf="name">
+    <h2>Product Details</h2>
+    <h3>{{ name }}</h3>
+    <div [ngSwitch]="name">
+        <p *ngSwitchCase="'Webcam'">Product is used for video</p>
+        <p *ngSwitchCase="'Microphone'">Product is used for audio</p>
+        <p *ngSwitchDefault>Product is for general use</p>
+    </div>
+    <button (click)="buy()">Buy Now</button>
+</div> -->
+
+<!-- <div *ngIf="name">
+    <h2>Product Details</h2>
+    <h3>{{ name }}</h3>
+     <span>{{productName}}</span> 
+    <button (click)="buy()">Buy Now</button>
+</div> 
+-->
+
+<!--
+    The difference is that the *ngIf directive adds or removes elements from the DOM tree whereas the hidden property hides or 
+    displays existing elements in the DOM tree. The former is recommended when dealing with a large amount of data, such as lists 
+    with hundreds of items or elements that contain advanced presentation logic in their child elements. In such cases, it performs 
+    better because Angular does not need to keep data or elements in memory, runtime, as it does with the hidden property.
+-->
+<!-- <div [hidden]="!name">
+    <h2>Product Details</h2>
+    <h3>{{ name }}</h3>
+    <button (click)="buy()">Buy Now</button>
+</div> -->

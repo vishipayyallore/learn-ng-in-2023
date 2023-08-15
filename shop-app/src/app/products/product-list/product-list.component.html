@@ -1,8 +1,28 @@
 <h2>Product List</h2>
 <ul>
-    <li (click)="selectedProduct = 'Webcam'">Webcam</li>
-    <li (click)="selectedProduct = 'Microphone'">Microphone</li>
-    <li (click)="selectedProduct = 'Wireless Keyboard'">Wireless Keyboard</li>
+    <li
+        *ngFor="let product of products | sort; let i = index"
+        (click)="selectedProduct = product"
+    >
+        {{ product.name }}
+    </li>
+</ul>
+<sv-product-detail
+    *ngIf="selectedProduct; else noProduct"
+    [product]="selectedProduct"
+    (bought)="onBuy()"
+>
+</sv-product-detail>
+
+<ng-template #noProduct>
+    <p>No product selected!</p>
+</ng-template>
+
+<!-- <h2>Product List</h2>
+<ul>
+    <li *ngFor="let product of products" (click)="selectedProduct = product">
+        {{ product }}
+    </li>
 </ul>
 
 <sv-product-detail
@@ -13,4 +33,19 @@
 
 <ng-template #noProduct>
     <p>No product selected!</p>
-</ng-template>
+</ng-template> -->
+
+<!-- <ul>
+    <li
+        *ngFor="let product of products; let i = index"
+        (click)="selectedProduct = product"
+    >
+        {{ i + 1 }}. {{ product }}
+    </li>
+</ul> -->
+
+<!-- <ul>
+    <li *ngFor="let product of products; trackBy: trackByProducts">
+        {{ product }}
+    </li>
+</ul> -->

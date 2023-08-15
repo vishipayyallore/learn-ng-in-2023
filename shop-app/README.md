@@ -14,6 +14,16 @@ ng generate component products/product-list --dry-run
 ng generate component products/product-detail --dry-run
 
 ng generate component products/product --standalone --dry-run
+
+ng generate interface products/product-interface --dry-run
+
+ng generate pipe products/sort --dry-run
+
+ng generate pipe products/filter --standalone --dry-run
+
+ng generate directive copyright --dry-run
+
+ng generate directive numeric --dry-run
 ```
 
 ```html
