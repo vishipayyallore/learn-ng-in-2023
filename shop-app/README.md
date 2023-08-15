@@ -24,6 +24,10 @@ ng generate pipe products/filter --standalone --dry-run
 ng generate directive copyright --dry-run
 
 ng generate directive numeric --dry-run
+
+ng generate directive products/productHost --dry-run
+
+ng generate directive permission --dry-run
 ```
 
 ```html

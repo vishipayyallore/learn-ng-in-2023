@@ -4,7 +4,7 @@ import { ProductInterface } from './product-interface';
 
 @Pipe({
     name: 'sort',
-    pure: false
+    // pure: false /* pipes that are impure call the transform method every time the change detection cycle is triggered. */
 })
 export class SortPipe implements PipeTransform {
     transform(value: ProductInterface[]): ProductInterface[] {

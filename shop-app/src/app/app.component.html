@@ -4,6 +4,10 @@
 
 <input svNumeric />
 
+<div *svPermission="['admin', 'agent']">
+    <h1>Adming and Agent</h1>
+</div>
+
 <router-outlet></router-outlet>
 
 <p svCopyright></p>
