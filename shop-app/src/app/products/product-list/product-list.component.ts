@@ -14,10 +14,10 @@ export class ProductListComponent implements OnInit, AfterViewInit {
     @ViewChild(ProductDetailComponent)
     productDetail: ProductDetailComponent | undefined;
     products: ProductInterface[] = [];
-    private productService: ProductsService;
+    // private productService: ProductsService;
 
-    constructor() {
-        this.productService = new ProductsService();
+    constructor(private productService: ProductsService) {
+        // this.productService = new ProductsService();
     }
 
     ngOnInit(): void {
