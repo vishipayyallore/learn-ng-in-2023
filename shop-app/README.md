@@ -28,6 +28,8 @@ ng generate directive numeric --dry-run
 ng generate directive products/productHost --dry-run
 
 ng generate directive permission --dry-run
+
+ng generate service products/products --dry-run
 ```
 
 ```html
