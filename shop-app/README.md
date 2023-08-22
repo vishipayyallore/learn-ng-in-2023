@@ -30,6 +30,8 @@ ng generate directive products/productHost --dry-run
 ng generate directive permission --dry-run
 
 ng generate service products/products --dry-run
+
+ng generate component products/favorites --dry-run
 ```
 
 ```html
