@@ -1,17 +1,11 @@
 <h2>Product List</h2>
 <ul>
-    <li
-        *ngFor="let product of products | sort; let i = index"
-        (click)="selectedProduct = product"
-    >
-        {{ product.name }}
+    <li *ngFor="let product of products | sort; let i = index" (click)="selectedProduct = product">
+        <!-- {{ product.name }} -->
+        <sv-product-view [id]="i"></sv-product-view>
     </li>
 </ul>
-<sv-product-detail
-    *ngIf="selectedProduct; else noProduct"
-    [product]="selectedProduct"
-    (bought)="onBuy()"
->
+<sv-product-detail *ngIf="selectedProduct; else noProduct" [product]="selectedProduct" (bought)="onBuy()">
 </sv-product-detail>
 
 <ng-template #noProduct>
