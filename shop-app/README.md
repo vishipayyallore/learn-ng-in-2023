@@ -32,6 +32,10 @@ ng generate directive permission --dry-run
 ng generate service products/products --dry-run
 
 ng generate component products/favorites --dry-run
+
+ng generate component products/product-view --dry-run
+
+ng generate service products/product-view/product-view --dry-run
 ```
 
 ```html
