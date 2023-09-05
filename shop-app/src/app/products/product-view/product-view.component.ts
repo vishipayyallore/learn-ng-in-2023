@@ -1,4 +1,4 @@
-import { Component, Host, Input, OnInit } from '@angular/core';
+import { Component, Host, Input, OnInit, Optional } from '@angular/core';
 
 import { ProductViewService } from './product-view.service';
 
@@ -13,7 +13,7 @@ export class ProductViewComponent implements OnInit {
 
   name = '';
 
-  constructor(@Host() private productviewService: ProductViewService) { }
+  constructor(@Host() @Optional() private productviewService: ProductViewService) { }
 
   ngOnInit(): void {
     const product = this.productviewService.getProduct(this.id);
