@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { ProductInterface } from '../product-interface';
 import { ProductsService } from '../products.service';
-import { FavoritesService } from './favorites.service';
+import { FavoritesService } from '../favorites.service';
 
 @Component({
   selector: 'sv-favorites',
