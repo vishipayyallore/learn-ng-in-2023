@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { ProductsService } from '../products.service'
 import { ProductInterface } from '../product-interface';
 
+// Service in a Service
 @Injectable()
 export class ProductViewService {
 

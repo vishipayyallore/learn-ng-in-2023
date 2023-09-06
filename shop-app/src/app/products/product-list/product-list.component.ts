@@ -8,7 +8,8 @@ import { ProductsService } from '../products.service';
     selector: 'sv-product-list',
     templateUrl: './product-list.component.html',
     styleUrls: ['./product-list.component.scss'],
-    providers: [ProductsService],
+    // providers: [ProductsService],
+    viewProviders: [ProductsService], // This is the correct way to provide a service to a component and its children
 })
 export class ProductListComponent implements OnInit, AfterViewInit {
     selectedProduct: ProductInterface | undefined;

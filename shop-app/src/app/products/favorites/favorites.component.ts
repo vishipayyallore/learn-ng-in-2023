@@ -9,7 +9,9 @@ import { ProductsService } from '../products.service';
 })
 export class FavoritesComponent implements OnInit {
   products: ProductInterface[] = [];
+
   constructor(private productService: ProductsService) { }
+
   ngOnInit(): void {
     this.products = this.productService.getProducts();
   }
