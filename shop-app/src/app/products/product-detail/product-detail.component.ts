@@ -1,15 +1,4 @@
-import {
-    Component,
-    Input,
-    OnInit,
-    Output,
-    EventEmitter,
-    ViewEncapsulation,
-    OnChanges,
-    SimpleChanges,
-    ChangeDetectionStrategy,
-} from '@angular/core';
-
+import { Component, Input, OnInit, Output, EventEmitter, ViewEncapsulation, OnChanges, SimpleChanges, ChangeDetectionStrategy, } from '@angular/core';
 import { ProductInterface } from '../product-interface';
 
 @Component({

@@ -6,7 +6,7 @@ import { ProductInterface } from './product-interface';
     providedIn: 'root',
 })
 export class ProductsService {
-    constructor() {}
+    constructor() { }
 
     getProducts(): ProductInterface[] {
         return [

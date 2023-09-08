@@ -5,7 +5,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     selector: '[svProductHost]',
 })
 export class ProductHostDirective implements OnInit {
-    constructor(private vc: ViewContainerRef) {}
+    constructor(private vc: ViewContainerRef) { }
     ngOnInit(): void {
         const productRef = this.vc.createComponent(ProductDetailComponent);
         productRef.setInput('product', {
