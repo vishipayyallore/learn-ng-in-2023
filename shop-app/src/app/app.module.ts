@@ -15,4 +15,4 @@ import { PermissionDirective } from './permission.directive';
     providers: [],
     bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

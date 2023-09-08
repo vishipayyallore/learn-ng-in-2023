@@ -12,4 +12,4 @@ import { ProductViewComponent } from './product-view/product-view.component';
     imports: [CommonModule],
     exports: [ProductListComponent],
 })
-export class ProductsModule {}
+export class ProductsModule { }
