@@ -5,7 +5,7 @@ import { ProductInterface } from './product-interface';
 import { ProductViewService } from './product-view/product-view.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class FavoritesService extends ProductsService {
 
