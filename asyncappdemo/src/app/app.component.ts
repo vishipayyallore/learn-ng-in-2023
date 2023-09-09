@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'asyncappdemo';
+  title = 'Learning Angular Async App';
+
+  constructor() {
+    this.changeTitle(this.setTitle);
+  }
+
+  private setTitle = () => {
+    this.title = 'Learning Angular Async App';
+  }
+
+  private changeTitle(callback: Function) {
+    setTimeout(() => {
+      callback();
+    }, 2000);
+  }
+
 }
