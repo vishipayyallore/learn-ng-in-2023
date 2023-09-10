@@ -7,6 +7,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ```bash
 ng new asyncappdemo --defaults --prefix sv
+
+ng generate component key-logger --dry-run
 ```
 
 ## Development server
