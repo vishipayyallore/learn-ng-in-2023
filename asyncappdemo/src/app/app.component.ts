@@ -32,13 +32,13 @@ export class AppComponent {
     console.log(`setTitle() - title is: ${this.title}`);
   }
 
-  private onComplete() {
-    return new Promise<void>(resolve => {
-      setInterval(() => {
-        resolve();
-      }, 2000);
-    });
-  }
+  // private onComplete() {
+  //   return new Promise<void>(resolve => {
+  //     setInterval(() => {
+  //       resolve();
+  //     }, 2000);
+  //   });
+  // }
 
   // private changeTitle(callback: Function) {
   //   console.log(`changeTitle() - title is: ${this.title}`);
