@@ -43,6 +43,7 @@ export class AppComponent {
   //   });
   // }
 
+  // Version 2
   // private onComplete() {
   //   return new Promise<void>(resolve => {
   //     setInterval(() => {
@@ -51,6 +52,7 @@ export class AppComponent {
   //   });
   // }
 
+  // Callback hell
   // private changeTitle(callback: Function) {
   //   console.log(`changeTitle() - title is: ${this.title}`);
   //   setTimeout(() => {
