@@ -34,6 +34,15 @@ export class AppComponent {
     console.log(`setTitle() - title is: ${this.title}`);
   }
 
+  // Version 1
+  // private onComplete() {
+  //   return new Promise<void>(resolve => {
+  //     setTimeout(() => {
+  //       resolve();
+  //     }, 2000);
+  //   });
+  // }
+
   // private onComplete() {
   //   return new Promise<void>(resolve => {
   //     setInterval(() => {
@@ -49,13 +58,6 @@ export class AppComponent {
   //   }, 2000);
   // }
 
-  // private onComplete() {
-  //   return new Promise<void>(resolve => {
-  //     setTimeout(() => {
-  //       resolve();
-  //     }, 2000);
-  //   });
-  // }
 
 
 }
