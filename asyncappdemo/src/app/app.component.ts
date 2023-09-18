@@ -17,7 +17,9 @@ export class AppComponent {
 
   constructor() {
     console.log(`constructor() - title is: ${this.title}`);
-    // this.changeTitle(this.setTitle); // Callback hell
+
+    // Callback hell
+    // this.changeTitle(this.setTitle); 
 
     // Promise Version
     // this.onComplete().then(this.setTitle);
