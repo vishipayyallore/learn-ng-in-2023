@@ -1,16 +1,6 @@
-# asyncappdemo
+# Reactivedemos
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
-
-## Few Commands
-
-```bash
-ng new asyncappdemo --defaults --prefix sv
-
-ng generate component key-logger --dry-run
-
-ng new reactivedemos --prefix sv --defaults  --dry-runr
-```
 
 ## Development server
 
