@@ -41,6 +41,9 @@ ng generate component products/product-view --dry-run
 ng generate service products/product-view/product-view --dry-run
 
 ng generate service products/favorites/favorites --dry-run
+
+ng generate component key-logger --dry-run
+
 ```
 
 ```html

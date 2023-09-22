@@ -2,7 +2,15 @@
 
 <sv-product-list></sv-product-list>
 
-<input svNumeric />
+<div class="div-styles">
+    <span>Key Logger: </span>
+    <sv-key-logger></sv-key-logger>
+</div>
+
+<div class="div-styles">
+    <span>Numeric: </span>
+    <input svNumeric />
+</div>
 
 <div *svPermission="['admin', 'agent']">
     <h1>Adming and Agent</h1>
