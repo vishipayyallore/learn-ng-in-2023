@@ -8,9 +8,10 @@ import { FilterPipe } from './products/filter.pipe';
 import { CopyrightDirective } from './copyright.directive';
 import { NumericDirective } from './numeric.directive';
 import { PermissionDirective } from './permission.directive';
+import { KeyLoggerComponent } from './key-logger/key-logger.component';
 
 @NgModule({
-    declarations: [AppComponent, CopyrightDirective, NumericDirective, PermissionDirective],
+    declarations: [AppComponent, CopyrightDirective, NumericDirective, PermissionDirective, KeyLoggerComponent],
     imports: [BrowserModule, FilterPipe, AppRoutingModule, ProductsModule],
     providers: [],
     bootstrap: [AppComponent],
