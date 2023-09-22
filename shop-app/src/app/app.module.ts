@@ -9,9 +9,10 @@ import { CopyrightDirective } from './copyright.directive';
 import { NumericDirective } from './numeric.directive';
 import { PermissionDirective } from './permission.directive';
 import { KeyLoggerComponent } from './key-logger/key-logger.component';
+import { RxjsDemosComponent } from './rxjs-demos/rxjs-demos.component';
 
 @NgModule({
-    declarations: [AppComponent, CopyrightDirective, NumericDirective, PermissionDirective, KeyLoggerComponent],
+    declarations: [AppComponent, CopyrightDirective, NumericDirective, PermissionDirective, KeyLoggerComponent, RxjsDemosComponent],
     imports: [BrowserModule, FilterPipe, AppRoutingModule, ProductsModule],
     providers: [],
     bootstrap: [AppComponent],

@@ -44,6 +44,8 @@ ng generate service products/favorites/favorites --dry-run
 
 ng generate component key-logger --dry-run
 
+ng generate component rxjs-demos --dry-run
+
 ```
 
 ```html
