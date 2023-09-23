@@ -23,7 +23,10 @@ export class ProductListComponent implements OnInit, AfterViewInit {
     }
 
     ngOnInit(): void {
-        this.products = this.productService.getProducts();
+        // Method 1
+        // this.products = this.productService.getProducts();
+
+        this.getProducts();
     }
 
     ngAfterViewInit(): void {
@@ -39,4 +42,11 @@ export class ProductListComponent implements OnInit, AfterViewInit {
     trackByProducts(index: number, name: string): string {
         return name;
     }
+
+    private getProducts() {
+        this.productService.getProducts().subscribe(products => {
+            this.products = products;
+        });
+    }
+
 }

@@ -12,8 +12,9 @@ export class FavoritesService extends ProductsService {
   constructor(private productViewService: ProductViewService) {
     super();
   }
-  override getProducts(): ProductInterface[] {
-    return super.getProducts().slice(1, 3);
-  }
+
+  // override getProducts(): ProductInterface[] {
+  //   return super.getProducts().slice(1, 3);
+  // }
 
 }
