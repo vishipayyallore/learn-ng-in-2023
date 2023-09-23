@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 import { ProductDetailComponent } from '../product-detail/product-detail.component';
 import { ProductInterface } from '../product-interface';
@@ -11,12 +12,13 @@ import { ProductsService } from '../products.service';
     // providers: [ProductsService],
     viewProviders: [ProductsService], // This is the correct way to provide a service to a component and its children
 })
-export class ProductListComponent implements OnInit, AfterViewInit {
+export class ProductListComponent implements OnInit, AfterViewInit, OnDestroy {
     selectedProduct: ProductInterface | undefined;
     @ViewChild(ProductDetailComponent)
     productDetail: ProductDetailComponent | undefined;
     products: ProductInterface[] = [];
     // private productService: ProductsService;
+    private productsSub: Subscription | undefined;
 
     constructor(private productService: ProductsService) {
         // this.productService = new ProductsService();
@@ -44,9 +46,13 @@ export class ProductListComponent implements OnInit, AfterViewInit {
     }
 
     private getProducts() {
-        this.productService.getProducts().subscribe(products => {
+        this.productsSub = this.productService.getProducts().subscribe(products => {
             this.products = products;
         });
+    }
+
+    ngOnDestroy(): void {
+        this.productsSub?.unsubscribe();
     }
 
 }
