@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Subscription, Observable } from 'rxjs';
 
 import { ProductDetailComponent } from '../product-detail/product-detail.component';
 import { ProductInterface } from '../product-interface';
@@ -11,19 +12,27 @@ import { ProductsService } from '../products.service';
     // providers: [ProductsService],
     viewProviders: [ProductsService], // This is the correct way to provide a service to a component and its children
 })
-export class ProductListComponent implements OnInit, AfterViewInit {
+export class ProductListComponent implements OnInit, AfterViewInit, OnDestroy {
     selectedProduct: ProductInterface | undefined;
     @ViewChild(ProductDetailComponent)
     productDetail: ProductDetailComponent | undefined;
-    products: ProductInterface[] = [];
+    
+    // Method 2
+    // products: ProductInterface[] = [];
+    products$: Observable<ProductInterface[]> | undefined;
+
     // private productService: ProductsService;
+    private productsSub: Subscription | undefined;
 
     constructor(private productService: ProductsService) {
         // this.productService = new ProductsService();
     }
 
     ngOnInit(): void {
-        this.products = this.productService.getProducts();
+        // Method 1
+        // this.products = this.productService.getProducts();
+
+        this.getProducts();
     }
 
     ngAfterViewInit(): void {
@@ -39,4 +48,21 @@ export class ProductListComponent implements OnInit, AfterViewInit {
     trackByProducts(index: number, name: string): string {
         return name;
     }
+
+    // Method 2
+    // private getProducts() {
+    //     this.productsSub = this.productService.getProducts().subscribe(products => {
+    //         this.products = products;
+    //     });
+    // }
+
+    private getProducts() {
+        this.products$ = this.productService.getProducts();
+    }
+
+
+    ngOnDestroy(): void {
+        this.productsSub?.unsubscribe();
+    }
+
 }
