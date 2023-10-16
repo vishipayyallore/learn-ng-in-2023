@@ -1,6 +1,52 @@
-# AcmeProducts
+# ACME Products
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
+
+## Commands
+
+```bash
+ng update @angular/cli @angular/core
+npm update
+
+ng new shop-app --routing --style=scss --prefix=sv --dry-run
+
+ng generate module products
+
+ng generate component products/product-list --dry-run
+
+ng generate component products/product-detail --dry-run
+
+ng generate component products/product --standalone --dry-run
+
+ng generate interface products/product-interface --dry-run
+
+ng generate pipe products/sort --dry-run
+
+ng generate pipe products/filter --standalone --dry-run
+
+ng generate directive copyright --dry-run
+
+ng generate directive numeric --dry-run
+
+ng generate directive products/productHost --dry-run
+
+ng generate directive permission --dry-run
+
+ng generate service products/products --dry-run
+
+ng generate component products/favorites --dry-run
+
+ng generate component products/product-view --dry-run
+
+ng generate service products/product-view/product-view --dry-run
+
+ng generate service products/favorites/favorites --dry-run
+
+ng generate component key-logger --dry-run
+
+ng generate component rxjs-demos --dry-run
+
+```
 
 ## Development server
 
