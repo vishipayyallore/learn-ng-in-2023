@@ -10,6 +10,8 @@ npm update
 
 ng new shop-app --routing --style=scss --prefix=sv --dry-run
 
+ng g c home/welcome --flat --dry-run
+
 ng generate module products
 
 ng generate component products/product-list --dry-run
