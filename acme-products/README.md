@@ -8,9 +8,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ng update @angular/cli @angular/core
 npm update
 
-ng new shop-app --routing --style=scss --prefix=sv --dry-run
+ng new acme-products --routing --style=scss --prefix=sv --dry-run
+
+ng g c home/welcome --flat --dry-run
 
 ng generate module products
+
+ng g c shared/star --flat
 
 ng generate component products/product-list --dry-run
 
